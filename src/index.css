@@ -136,7 +136,25 @@ nav {
 
 /* Hide photo on mobile so layout doesn't break */
 @media (max-width: 900px) {
-  .hero-photo { display: none; }
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .hero-photo img {
+    opacity: 1;
+    filter: grayscale(40%);
+    object-position: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
 }
 .hero-content { max-width: 780px; }
 
