@@ -136,6 +136,12 @@ nav {
 
 /* Hide photo on mobile so layout doesn't break */
 @media (max-width: 900px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero-photo {
     position: relative;
     inset: auto;
@@ -147,6 +153,9 @@ nav {
   }
 
   .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* 👈 this was missing — fixes squish/overflow */
     opacity: 1;
     filter: grayscale(40%);
     object-position: center;
@@ -154,6 +163,11 @@ nav {
 
   .hero-content {
     text-align: center;
+  }
+
+  .hero-cta,
+  .hero-role {
+    justify-content: center;  /* centers buttons + role tags too */
   }
 }
 .hero-content { max-width: 780px; }
