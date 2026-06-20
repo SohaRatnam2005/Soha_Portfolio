@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const NAV_LINKS = ["about", "experience", "projects", "skills", "education", "achievements", "contact"];
+const NAV_LINKS = ["about", "experience", "projects", "skills", "education", "achievements","certifications", "contact"];
 
 const EXPERIENCE = [
   {
@@ -58,6 +58,37 @@ const PROJECTS = [
     { label: "↗ GitHub", href: "https://github.com/soharatnam" },
   ],
 },
+];
+
+const CERTIFICATIONS = [
+  {
+    icon: "📊",
+    title: "GenAI Powered Data Analytics Job Simulation",
+    issuer: "Tata · Forage",
+    date: "June 2026",
+    desc: "Completed practical tasks in exploratory data analysis, AI-driven delinquency prediction, business data storytelling, and implementing an AI-powered collections strategy.",
+  },
+  {
+    icon: "💻",
+    title: "Full Stack Web Development",
+    issuer: "Udemy",
+    date: "2025",
+    desc: "Comprehensive course covering frontend and backend development — including React.js, Node.js, Express, databases, and building complete full-stack applications.",
+  },
+  {
+    icon: "⚛️",
+    title: "React.js Certification",
+    issuer: "GeeksforGeeks",
+    date: "2025",
+    desc: "Certified course covering React fundamentals, hooks, component architecture, state management, and building scalable frontend applications.",
+  },
+  {
+    icon: "📈",
+    title: "Data Analytics & Big Data",
+    issuer: "IBM SkillsBuild",
+    date: "2025",
+    desc: "Covered core concepts of data analytics and big data — including data processing, visualization, and analytical techniques for real-world datasets.",
+  },
 ];
 
 const SKILLS = [
@@ -226,7 +257,35 @@ function Navbar({ menuOpen, setMenuOpen }) {
     </>
   );
 }
-
+function Certifications() {
+  const refs = useStaggerFadeUp(CERTIFICATIONS.length);
+  return (
+    <section id="certifications">
+      <div className="section-label">08 — Certifications</div>
+      <h2 className="section-title">Certifications</h2>
+      <div className="cert-grid">
+        {CERTIFICATIONS.map((c, i) => (
+          <div
+            className="cert-card fade-up"
+            key={c.title}
+            ref={(el) => (refs.current[i] = el)}
+          >
+            <div className="cert-icon">{c.icon}</div>
+            <div className="cert-info">
+              <div className="cert-title">{c.title}</div>
+              <div className="cert-meta">
+                <span className="cert-issuer">{c.issuer}</span>
+                <span className="cert-sep">·</span>
+                <span className="cert-date">{c.date}</span>
+              </div>
+              <p className="cert-desc">{c.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 function Hero() {
   return (
     <div className="hero" id="home">
@@ -250,6 +309,9 @@ function Hero() {
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View Projects</a>
           <a href="#contact" className="btn btn-ghost">Get in Touch</a>
+          <a href="/Soha_portfolio.pdf" download="Soha_Ratnam_Resume.pdf" className="btn btn-outline">
+            Download Resume ↓
+          </a>
         </div>
         <div className="hero-photo">
         <img src="/soha.jpg.jpg" alt="Soha Ratnam" />
@@ -554,17 +616,19 @@ export default function App() {
       <main>
         <Hero />
         <div className="divider" />
-        <About />
+        <About/>
         <div className="divider" />
-        <Projects />
+        <Projects/>
         <div className="divider" />
         <Experience />
         <div className="divider" />
-        <Skills />
+        <Skills/>
         <div className="divider" />
-        <Education />
+        <Education/>
         <div className="divider" />
-        <Achievements />
+        <Achievements/>
+        <div className="divider" />
+        <Certifications/>
         <div className="divider" />
         <Contact />
       </main>
