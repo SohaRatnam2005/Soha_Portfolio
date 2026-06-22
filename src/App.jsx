@@ -1,6 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
-const NAV_LINKS = ["about", "experience", "projects", "skills", "education", "achievements","certifications", "contact"];
+const NAV_LINKS = [
+  "about",
+  "experience",
+  "projects",
+  "skills",
+  "education",
+  "achievements",
+  "certifications",
+  "contact",
+];
 
 const EXPERIENCE = [
   {
@@ -21,7 +30,6 @@ const EXPERIENCE = [
       "Implemented responsive UI designs and improved user experience across all device breakpoints.",
     ],
   },
-  
 ];
 
 const PROJECTS = [
@@ -50,14 +58,12 @@ const PROJECTS = [
     ],
   },
   {
-  num: "PROJECT_04",
-  title: "Mini Projects",
-  desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
-  tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
-  links: [
-    { label: "↗ GitHub", href: "https://github.com/soharatnam" },
-  ],
-},
+    num: "PROJECT_04",
+    title: "Mini Projects",
+    desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
+    tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
+    links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" }],
+  },
 ];
 
 const CERTIFICATIONS = [
@@ -98,7 +104,14 @@ const SKILLS = [
   },
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Material UI"],
+    items: [
+      "React.js",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Material UI",
+    ],
   },
   {
     category: "Backend & Tools",
@@ -121,7 +134,7 @@ const EDUCATION = [
     school: "JSS Academy of Technical Education",
     degree: "B.Tech in Computer Science · Noida, UP",
     period: "2023 – 2027",
-    score: "8.7",
+    score: "8.5",
     scoreLabel: "CGPA",
   },
   {
@@ -147,10 +160,10 @@ const ACHIEVEMENTS = [
     desc: "Led a team selected among 50,000+ participants to present SkillSathi AI — an AI/ML-based personalised learning platform at the EY Techathon 5.0.",
   },
   {
-  icon: "📊",
-  title: "Tata GenAI Data Analytics — Forage",
-  desc: "Completed Tata's GenAI Powered Data Analytics Job Simulation on Forage (June 2026) — covering exploratory data analysis, AI-driven delinquency prediction, and business data storytelling.",
-},
+    icon: "📊",
+    title: "Tata GenAI Data Analytics — Forage",
+    desc: "Completed Tata's GenAI Powered Data Analytics Job Simulation on Forage (June 2026) — covering exploratory data analysis, AI-driven delinquency prediction, and business data storytelling.",
+  },
   {
     icon: "🥇",
     title: "Deconstruct — AIR 52",
@@ -169,10 +182,30 @@ const ACHIEVEMENTS = [
 ];
 
 const CONTACT_LINKS = [
-  { icon: "📧", label: "Email", value: "soharatnam12095@gmail.com", href: "mailto:soharatnam12095@gmail.com" },
-  { icon: "📱", label: "Phone", value: "+91 9219035120", href: "tel:+919219035120" },
-  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/soharatnam", href: "https://linkedin.com" },
-  { icon: "⌨️", label: "GitHub", value: "github.com/soharatnam", href: "https://github.com" },
+  {
+    icon: "📧",
+    label: "Email",
+    value: "soharatnam12095@gmail.com",
+    href: "mailto:soharatnam12095@gmail.com",
+  },
+  {
+    icon: "📱",
+    label: "Phone",
+    value: "+91 9219035120",
+    href: "tel:+919219035120",
+  },
+  {
+    icon: "💼",
+    label: "LinkedIn",
+    value: "linkedin.com/in/soharatnam",
+    href: "https://linkedin.com",
+  },
+  {
+    icon: "⌨️",
+    label: "GitHub",
+    value: "github.com/soharatnam",
+    href: "https://github.com",
+  },
 ];
 
 // ── FADE-UP HOOK ─────────────────────────────────────────────────────────────
@@ -189,14 +222,13 @@ function useFadeUp() {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
   return ref;
 }
-
 
 function useStaggerFadeUp(count) {
   const refs = useRef([]);
@@ -211,7 +243,7 @@ function useStaggerFadeUp(count) {
             observer.unobserve(el);
           }
         },
-        { threshold: 0.12 }
+        { threshold: 0.12 },
       );
       observer.observe(el);
     });
@@ -219,31 +251,35 @@ function useStaggerFadeUp(count) {
   return refs;
 }
 
-//  COMPONENTS 
+//  COMPONENTS
 
 function Navbar({ menuOpen, setMenuOpen }) {
   return (
     <>
       <nav>
-        <div className="nav-logo">
-          
-        </div>
+        <div className="nav-logo"></div>
         <ul className="nav-links">
           {NAV_LINKS.map((link) => (
             <li key={link}>
-              <a href={`#${link}`}>{link.charAt(0).toUpperCase() + link.slice(1)}</a>
+              <a href={`#${link}`}>
+                {link.charAt(0).toUpperCase() + link.slice(1)}
+              </a>
             </li>
           ))}
         </ul>
         <div
           className="hamburger"
           onClick={() => setMenuOpen((o) => !o)}
-          onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setMenuOpen((o) => !o)}
+          onKeyDown={(e) =>
+            (e.key === "Enter" || e.key === " ") && setMenuOpen((o) => !o)
+          }
           role="button"
           tabIndex={0}
           aria-label="Menu"
         >
-          <span /><span /><span />
+          <span />
+          <span />
+          <span />
         </div>
       </nav>
 
@@ -288,49 +324,64 @@ function Certifications() {
 }
 function Hero() {
   return (
-    <div className="hero" id="home">
-      <div className="hero-content">
-        <div className="hero-tag">Available for opportunities</div>
-        <h1>
-          <span className="name-first">Soha</span>
-          <span className="name-last">Ratnam</span>
-        </h1>
-        <div className="hero-role">
-          <span>Full Stack Developer</span>
-          <span className="sep">/</span>
-          <span className="sep">/</span>
-          <span className="highlight">B.Tech CSE '27</span>
-        </div>
-        <p className="hero-bio">
-          Building fast, thoughtful interfaces at the intersection of design and engineering.
-          Currently studying at JSS Academy of Technical Education, Noida — with hands-on
-          experience shipping production-grade frontend across fintech and commerce platforms.
-        </p>
-        <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary">View Projects</a>
-          <a href="#contact" className="btn btn-ghost">Get in Touch</a>
-          <a href="/Soha_portfolio.pdf" download="Soha_Ratnam_Resume.pdf" className="btn btn-outline">
-            Download Resume ↓
-          </a>
-        </div>
-        <div className="hero-photo">
-        <img src="/soha.jpg.jpg" alt="Soha Ratnam" />
+    <>
+      <div className="hero-photo">
+        <img className="absolute" src="/soha.jpg.jpg" alt="Soha Ratnam" />
+        <h1 className="relative">
+            <span className="name-first">Soha</span>
+            <span className="name-last">Ratnam</span>
+          </h1>
       </div>
-      </div>
-      
-      <div className="hero-stats">
-        {[
-          { num: "8.7", label: "CGPA" },
-          { num: "AIR 68", label: "Deconstruct " },
-          { num: "50K+", label: "EY Techathon" },
-        ].map((s) => (
-          <div className="hero-stat" key={s.label}>
-            <div className="num">{s.num}</div>
-            <div className="label">{s.label}</div>
+      <div className="hero" id="home">
+        <div className="hero-content">
+          <div className="hero-tag">Available for opportunities</div>
+          <h1>
+            <span className="name-first">Soha</span>
+            <span className="name-last">Ratnam</span>
+          </h1>
+          <div className="hero-role">
+            <span>Full Stack Developer</span>
+            <span className="sep">/</span>
+            <span className="sep">/</span>
+            <span className="highlight">B.Tech CSE '27</span>
           </div>
-        ))}
+          <p className="hero-bio">
+            Building fast, thoughtful interfaces at the intersection of design
+            and engineering. Currently studying at JSS Academy of Technical
+            Education, Noida — with hands-on experience shipping
+            production-grade frontend across fintech and commerce platforms.
+          </p>
+          <div className="hero-cta">
+            <a href="#projects" className="btn btn-primary">
+              View Projects
+            </a>
+            <a href="#contact" className="btn btn-ghost">
+              Get in Touch
+            </a>
+            <a
+              href="/Soha_portfolio.pdf"
+              download="Soha_Ratnam_Resume.pdf"
+              className="btn btn-outline"
+            >
+              Download Resume ↓
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-stats">
+          {[
+            { num: "8.5", label: "CGPA" },
+            { num: "AIR 68", label: "Deconstruct " },
+            { num: "50K+", label: "EY Techathon" },
+          ].map((s) => (
+            <div className="hero-stat" key={s.label}>
+              <div className="num">{s.num}</div>
+              <div className="label">{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -344,19 +395,26 @@ function About() {
       <div className="about-grid">
         <div className="about-text fade-up" ref={textRef}>
           <p>
-            I'm Soha Ratnam, a Computer Science undergrad at JSS Academy of Technical Education,
-            Noida, with a CGPA of 8.9. I specialise in building polished, performant web interfaces
-            using React.js and Next.js — from design-to-code translations to full-stack integrations.
+            I'm Soha Ratnam, a Computer Science undergrad at JSS Academy of
+            Technical Education, Noida, with a CGPA of 8.9. I specialise in
+            building polished, performant web interfaces using React.js and
+            Next.js — from design-to-code translations to full-stack
+            integrations.
           </p>
-          
-      
         </div>
         <div className="about-meta fade-up" ref={metaRef}>
           {[
-            { icon: "📍", label: "Location", value: "Noida , Uttar Pradesh, India" },
-            { icon: "🎓", label: "Currently", value: "B.Tech CSE  · 2023–2027" },
+            {
+              icon: "📍",
+              label: "Location",
+              value: "Noida , Uttar Pradesh, India",
+            },
+            {
+              icon: "🎓",
+              label: "Currently",
+              value: "B.Tech CSE  · 2023–2027",
+            },
             { icon: "📧", label: "Email", value: "soharatnam12095@gmail.com" },
-            
           ].map((m) => (
             <div className="meta-item" key={m.label}>
               <div className="meta-icon">{m.icon}</div>
@@ -391,7 +449,9 @@ function Experience() {
             </div>
             <div className="exp-company">{exp.company}</div>
             <ul className="exp-bullets">
-              {exp.bullets.map((b, j) => <li key={j}>{b}</li>)}
+              {exp.bullets.map((b, j) => (
+                <li key={j}>{b}</li>
+              ))}
             </ul>
           </div>
         ))}
@@ -417,12 +477,22 @@ function Projects() {
             <div className="proj-title">{p.title}</div>
             <p className="proj-desc">{p.desc}</p>
             <div className="proj-tags">
-              {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+              {p.tags.map((t) => (
+                <span className="tag" key={t}>
+                  {t}
+                </span>
+              ))}
             </div>
             {p.links.length > 0 && (
               <div className="proj-links">
                 {p.links.map((l) => (
-                  <a href={l.href} target="_blank" rel="noreferrer" className="proj-link" key={l.label}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="proj-link"
+                    key={l.label}
+                  >
                     {l.label}
                   </a>
                 ))}
@@ -451,7 +521,9 @@ function Skills() {
             <div className="skill-cat-name">{s.category}</div>
             <div className="skill-items">
               {s.items.map((item) => (
-                <div className="skill-item" key={item}>{item}</div>
+                <div className="skill-item" key={item}>
+                  {item}
+                </div>
               ))}
             </div>
           </div>
@@ -462,7 +534,9 @@ function Skills() {
         <div className="section-label">Relevant Coursework</div>
         <div className="course-chips" style={{ marginTop: "20px" }}>
           {COURSEWORK.map((c) => (
-            <div className="course-chip" key={c}>{c}</div>
+            <div className="course-chip" key={c}>
+              {c}
+            </div>
           ))}
         </div>
       </div>
@@ -532,19 +606,20 @@ function Contact() {
         <div className="contact-left fade-up" ref={leftRef}>
           <div className="section-label">07 — Contact</div>
           <h2>
-            Let's Build<br />
-            <span>Something</span><br />
+            Let's Build
+            <br />
+            <span>Something</span>
+            <br />
             Together.
           </h2>
           <p>
-            I'm currently open to internship roles, freelance projects, and full-time
-            opportunities after graduation. If you have something in mind, let's talk.
+            I'm currently open to internship roles, freelance projects, and
+            full-time opportunities after graduation. If you have something in
+            mind, let's talk.
           </p>
-         
         </div>
 
         <div className="contact-cta fade-up" ref={rightRef}>
-          
           <div className="contact-links">
             {CONTACT_LINKS.map((c) => (
               <a
@@ -571,11 +646,12 @@ function Contact() {
 function Footer() {
   return (
     <footer>
-      <div className="footer-left">© 2025 Soha Ratnam · Built with React &amp; Tailwind CSS</div>
+      <div className="footer-left">
+        © 2025 Soha Ratnam · Built with React &amp; Tailwind CSS
+      </div>
     </footer>
   );
 }
-
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -616,19 +692,19 @@ export default function App() {
       <main>
         <Hero />
         <div className="divider" />
-        <About/>
+        <About />
         <div className="divider" />
-        <Projects/>
+        <Projects />
         <div className="divider" />
         <Experience />
         <div className="divider" />
-        <Skills/>
+        <Skills />
         <div className="divider" />
-        <Education/>
+        <Education />
         <div className="divider" />
-        <Achievements/>
+        <Achievements />
         <div className="divider" />
-        <Certifications/>
+        <Certifications />
         <div className="divider" />
         <Contact />
       </main>
@@ -637,4 +713,3 @@ export default function App() {
     </>
   );
 }
-
