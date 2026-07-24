@@ -62,7 +62,7 @@ const PROJECTS = [
     title: "Mini Projects",
     desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
     tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" }],
+    links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" },{ label: "↗ Tableau Public", href: "https://public.tableau.com/views/NetflixDataevaluation/Main?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },],
   },
   {
     nnum: "PROJECT_06",
