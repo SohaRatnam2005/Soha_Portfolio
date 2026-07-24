@@ -64,6 +64,13 @@ const PROJECTS = [
     tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
     links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" }],
   },
+  {
+    nnum: "PROJECT_06",
+    title: "Netflix Content Analysis",
+    desc: "An interactive data analytics project exploring 8,800+ Netflix titles. Used SQL for data cleaning and analysis to uncover trends in genres, ratings, countries, and content growth, with insights visualized through a Tableau dashboard.",
+    tags: ["SQL", "PostgreSQL", "Tableau", "Data Analysis", "Data Visualization","MS Excel"],
+    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Netflix_sql" }],
+  },
 ];
 
 const CERTIFICATIONS = [
