@@ -62,14 +62,14 @@ const PROJECTS = [
     title: "Mini Projects",
     desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
     tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" },{ label: "↗ Tableau Public", href: "https://public.tableau.com/views/NetflixDataevaluation/Main?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },],
+    links: [{ label: "↗ GitHub", href: "https://github.com/soharatnam" },],
   },
   {
     nnum: "PROJECT_06",
     title: "Netflix Content Analysis",
     desc: "An interactive data analytics project exploring 8,800+ Netflix titles. Used SQL for data cleaning and analysis to uncover trends in genres, ratings, countries, and content growth, with insights visualized through a Tableau dashboard.",
     tags: ["SQL", "PostgreSQL", "Tableau", "Data Analysis", "Data Visualization","MS Excel"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Netflix_sql" }],
+    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Netflix_sql" },{ label: "↗ Tableau Public", href: "https://public.tableau.com/views/NetflixDataevaluation/Main?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },],
   },
 ];
 
