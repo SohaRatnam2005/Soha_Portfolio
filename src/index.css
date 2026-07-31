@@ -468,6 +468,12 @@ section {
   background: radial-gradient(circle at top right, var(--cyan-dim), transparent 60%);
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
+}
+.proj-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
 }
 .proj-card:hover::after { opacity: 1; }
 .proj-card:hover { border-color: var(--border2); transform: translateY(-3px); }
@@ -500,7 +506,7 @@ section {
   padding: 3px 8px;
   letter-spacing: 0.05em;
 }
-.proj-links { display: flex; gap: 12px; }
+
 .proj-link {
   font-family: var(--font-mono);
   font-size: 0.7rem;
