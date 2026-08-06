@@ -424,7 +424,7 @@ function Hero() {
               Get in Touch
             </a>
             <a
-              href="/Soha_portfolio.pdf"
+              href="/Soha_Ratnam_Resume.pdf"
               download="Soha_Ratnam_Resume.pdf"
               className="btn btn-outline"
             >
