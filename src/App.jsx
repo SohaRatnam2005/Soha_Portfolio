@@ -38,44 +38,98 @@ const PROJECTS = [
     title: "Resume Analyzer",
     desc: "AI-powered Resume Analyzer featuring resume scoring, ATS insights, and AI-generated feedback. Supports PDF upload, text extraction, and a responsive real-time analysis UI.",
     tags: ["Puter.js", "Next.js", "Tailwind CSS", "AI"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Resume-lens" },
-      { label: "↗ Live Demo", href: "https://resume-lens-three-self.vercel.app/" },],
+    links: [
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/SohaRatnam2005/Resume-lens",
+      },
+      {
+        label: "↗ Live Demo",
+        href: "https://resume-lens-three-self.vercel.app/",
+      },
+    ],
   },
   {
     num: "PROJECT_02",
-    title: "AI Text Summarizer",
-    desc: "AI-powered text summarization app using Next.js and Hugging Face NLP APIs. Includes server-side routes for efficient text processing and clean summary generation.",
-    tags: ["Next.js", "Hugging Face API", "Tailwind CSS", "NLP"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/pdf-summarizer" },
-          { label: "↗ Live Demo", href: "https://pdf-summarizer-qtc2.vercel.app/" },
+    title: "Bolt Clone",
+    desc: "AI-powered website builder that generates full-stack React/Node.js applications from natural language prompts. Features AI-driven code generation, project scaffolding, Monaco Editor integration, and an interactive file explorer.",
+    tags: ["React", "TypeScript", "Node.js", "Express.js", "OpenRouter AI"],
+    links: [
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/SohaRatnam2005/Bolt_Clone",
+      },
     ],
   },
   {
     num: "PROJECT_03",
-    title: "SmartAttendee",
-    desc: "Full-stack attendance management system with role-based dashboards and REST API integration. Optimised frontend performance and improved scalability across the app.",
-    tags: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "MERN"],
+    title: "AI Text Summarizer",
+    desc: "AI-powered text summarization app using Next.js and Hugging Face NLP APIs. Includes server-side routes for efficient text processing and clean summary generation.",
+    tags: ["Next.js", "Hugging Face API", "Tailwind CSS", "NLP"],
     links: [
-      { label: "↗ GitHub", href: "https://github.com/utkarsh-2033/SmartAttendee-SIH25" },
-      // { label: "↗ Live Demo", href: "#" },
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/SohaRatnam2005/pdf-summarizer",
+      },
+      { label: "↗ Live Demo", href: "https://pdf-summarizer-qtc2.vercel.app/" },
     ],
   },
   {
     num: "PROJECT_04",
-    title: "Netflix Content Analysis",
-    desc: "An interactive data analytics project exploring 8,800+ Netflix titles. Used SQL for data cleaning and analysis to uncover trends in genres, ratings, countries, and content growth, with insights visualized through a Tableau dashboard.",
-    tags: ["SQL", "PostgreSQL", "Tableau", "Data Analysis", "Data Visualization","MS Excel"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Netflix_sql" },{ label: "↗ Live Demo", href: "https://public.tableau.com/views/NetflixDataevaluation/Main?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },],
+    title: "SmartAttendee",
+    desc: "Full-stack attendance management system with role-based dashboards and REST API integration. Optimised frontend performance and improved scalability across the app.",
+    tags: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "MERN"],
+    links: [
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/utkarsh-2033/SmartAttendee-SIH25",
+      },
+      {
+        label: "↗ Live Demo",
+        href: "https://smart-attendee-sih-25.vercel.app/",
+      },
+    ],
   },
   {
     num: "PROJECT_05",
+    title: "Netflix Content Analysis",
+    desc: "An interactive data analytics project exploring 8,800+ Netflix titles. Used SQL for data cleaning and analysis to uncover trends in genres, ratings, countries, and content growth, with insights visualized through a Tableau dashboard.",
+    tags: [
+      "SQL",
+      "PostgreSQL",
+      "Tableau",
+      "Data Analysis",
+      "Data Visualization",
+      "MS Excel",
+    ],
+    links: [
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/SohaRatnam2005/Netflix_sql",
+      },
+      {
+        label: "↗ Live Demo",
+        href: "https://public.tableau.com/views/NetflixDataevaluation/Main?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+      },
+    ],
+  },
+  {
+    num: "PROJECT_06",
     title: "Mini Projects",
     desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
     tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
-    links: [{ label: "↗ GitHub", href: "https://github.com/SohaRatnam2005/Mini_Games" },],
+    links: [
+      {
+        label: "↗ GitHub",
+        href: "https://github.com/SohaRatnam2005/Mini_Games",
+      },
+    ],
   },
-  
 ];
+
+
+
+
 
 const CERTIFICATIONS = [
   {
@@ -339,9 +393,9 @@ function Hero() {
       <div className="hero-photo">
         <img className="absolute" src="/soha.jpg.jpg" alt="Soha Ratnam" />
         <h1 className="relative">
-            <span className="name-first">Soha</span>
-            <span className="name-last">Ratnam</span>
-          </h1>
+          <span className="name-first">Soha</span>
+          <span className="name-last">Ratnam</span>
+        </h1>
       </div>
       <div className="hero" id="home">
         <div className="hero-content">
