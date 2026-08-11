@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { GitHubCalendar } from 'react-github-calendar';
+
 
 const NAV_LINKS = [
   "about",
@@ -270,11 +272,22 @@ const CONTACT_LINKS = [
   {
     icon: "⌨️",
     label: "GitHub",
-    value: "github.com/soharatnam",
+    value: "github.com/SohaRatnam2005",
     href: "https://github.com",
   },
 ];
 
+function GitHubActivity() {
+  return (
+    <section className="github-section" id="github">
+      <div className="section-header">
+        <h2>GitHub Activity</h2>
+      </div>
+
+      <GitHubCalendar username="SohaRatnam2005" />
+    </section>
+  );
+}
 
 function useFadeUp() {
   const ref = useRef(null);
@@ -452,12 +465,21 @@ function Certifications() {
 // }
 function Hero() {
   return (
-    <div className="hero" id="home">
+  <div className="hero" id="home">
 
-      <div className="hero-content">
+    <div className="hero-content">
 
-        <div className="hero-tag">
-          Available for opportunities
+      <div className="hero-tag">
+        Available for opportunities
+      </div>
+
+      <div className="hero-name-row">
+
+        <div className="kitty-dancer">
+          <img
+            src="/mèo-yêu.gif"
+            alt="Dancing Hello Kitty"
+          />
         </div>
 
         <h1>
@@ -465,54 +487,62 @@ function Hero() {
           <span className="name-last">Ratnam</span>
         </h1>
 
-        <div className="hero-role">
-          <span>Full Stack Developer</span>
-          <span className="sep">/</span>
-          <span className="highlight">B.Tech CSE '27</span>
-        </div>
-
-        <p className="hero-bio">
-          Building fast, thoughtful interfaces at the intersection
-          of design and engineering. Currently studying at JSS
-          Academy of Technical Education, Noida — with hands-on
-          experience shipping production-grade frontend across
-          fintech and commerce platforms.
-        </p>
-
-        <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary">
-            View Projects
-          </a>
-
-          <a href="#contact" className="btn btn-ghost">
-            Get in Touch
-          </a>
-
-          <a
-            href="/Soha_Ratnam_Resume.pdf"
-            download="Soha_Ratnam_Resume.pdf"
-            className="btn btn-outline"
-          >
-            Download Resume ↓
-          </a>
-        </div>
-
       </div>
 
-      {/* PROFILE PHOTO */}
-      <div className="hero-profile">
-        <div className="hero-profile-frame">
-          <img
-            src="/Soha.jpeg"
-            alt="Soha Ratnam"
-          />
-        </div>
+      <div className="hero-role">
+        <span>Full Stack Developer</span>
+        <span className="sep">/</span>
+        <span className="highlight">B.Tech CSE '27</span>
+      </div>
 
-        
+      <p className="hero-bio">
+        Building fast, thoughtful interfaces at the intersection
+        of design and engineering. Currently studying at JSS
+        Academy of Technical Education, Noida — with hands-on
+        experience shipping production-grade frontend across
+        fintech and commerce platforms.
+      </p>
+
+      <div className="hero-cta">
+
+        <a href="#projects" className="btn btn-primary">
+          View Projects
+        </a>
+
+        <a href="#contact" className="btn btn-ghost">
+          Get in Touch
+        </a>
+
+        <a
+          href="/Soha_Ratnam_Resume.pdf"
+          download="Soha_Ratnam_Resume.pdf"
+          className="btn btn-outline"
+        >
+          Download Resume ↓
+        </a>
+
       </div>
 
     </div>
-  );
+
+
+    {/* PROFILE PHOTO */}
+
+    <div className="hero-profile">
+
+      <div className="hero-profile-frame">
+
+        <img
+          src="/Soha.jpeg"
+          alt="Soha Ratnam"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+);
 }
 
 function About() {
@@ -912,7 +942,7 @@ export default function App() {
     return () => document.removeEventListener("mousemove", handler);
   }, []);
 
-  // Scroll progress bar
+
   useEffect(() => {
     const handler = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
@@ -937,7 +967,7 @@ export default function App() {
         <About />
         <div className="divider" />
         <Projects />
-        <div className="divider" />
+        <GitHubActivity />
         <Experience />
         <div className="divider" />
         <Skills />
