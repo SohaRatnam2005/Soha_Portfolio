@@ -267,13 +267,13 @@ const CONTACT_LINKS = [
     icon: "💼",
     label: "LinkedIn",
     value: "linkedin.com/in/soharatnam",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/soha-ratnam/",
   },
   {
     icon: "⌨️",
     label: "GitHub",
     value: "github.com/SohaRatnam2005",
-    href: "https://github.com",
+    href: "https://github.com/SohaRatnam2005",
   },
 ];
 
