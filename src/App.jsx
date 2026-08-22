@@ -125,7 +125,23 @@ const PROJECTS = [
     ],
   },
   {
-    num: "PROJECT_06",
+  num: "PROJECT_06",
+  title: "CookConnect",
+  desc: "A full-stack recipe-sharing platform (food-blog style) built with the MERN stack, featuring recipe browsing, JWT-based user authentication, and recipe management. Built to practice REST APIs, MongoDB Atlas integration, and full-stack web development.",
+  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Tailwind CSS"],
+  links: [
+    {
+      label: "↗ Live",
+      href: "https://food-recipe-rouge.vercel.app/",
+    },
+    {
+      label: "↗ GitHub",
+      href: "https://github.com/SohaRatnam2005/Food_Recipe",
+    },
+  ],
+},
+  {
+    num: "PROJECT_07",
     title: "Mini Projects",
     desc: "A collection of small fun builds — including browser-based games, a weather app, and other UI experiments. Built to practice core JavaScript, API integration, and frontend fundamentals.",
     tags: ["JavaScript", "HTML5", "CSS3", "APIs", "React.js"],
@@ -523,7 +539,7 @@ function Hero() {
         </a>
 
         <a
-          href="/Soha_Resume.pdf"
+          href="/Soha_Resume_New (1).pdf"
           download="Soha_Resume.pdf"
           className="btn btn-outline"
         >
