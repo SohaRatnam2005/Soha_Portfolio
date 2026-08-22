@@ -523,8 +523,8 @@ function Hero() {
         </a>
 
         <a
-          href="/Soha_Ratnam_Resume.pdf"
-          download="Soha_Ratnam_Resume.pdf"
+          href="/Soha_Resume.pdf"
+          download="Soha_Resume.pdf"
           className="btn btn-outline"
         >
           Download Resume ↓
