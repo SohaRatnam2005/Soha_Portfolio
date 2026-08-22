@@ -15,6 +15,23 @@ const NAV_LINKS = [
 
 const EXPERIENCE = [
   {
+    role: "Data Analytics Intern",
+    company: "IBM SkillsBuild ",
+    period: "Jun 2026 - july 2026",
+    bullets: [
+      " Performed data analysis and dashboard development using Excel, SQL, and Tableau, creating data-driven visualizations to communicate insights to stakeholders",
+    ]
+  },
+
+  {
+    role: "Frontend Intern",
+    company: "StarPortal",
+    period: "Jun 2025 – Aug 2025",
+    bullets: [
+      "Built responsive frontend components and integrated APIs for a next-generation trading platform.",
+      "Converted UI/UX mockups into responsive, cross-browser compatible interfaces with high fidelity.",
+    ],
+  },{
     role: "Frontend Intern",
     company: "StarPortal",
     period: "Jun 2025 – Aug 2025",
@@ -23,15 +40,7 @@ const EXPERIENCE = [
       "Converted UI/UX mockups into responsive, cross-browser compatible interfaces with high fidelity.",
     ],
   },
-  {
-    role: "Web Development Intern",
-    company: "Booqin · Remote",
-    period: "Sep 2025 – Oct 2025",
-    bullets: [
-      "Developed scalable frontend components using React.js, JavaScript, and Tailwind CSS.",
-      "Implemented responsive UI designs and improved user experience across all device breakpoints.",
-    ],
-  },
+  
 ];
 
 const PROJECTS = [
